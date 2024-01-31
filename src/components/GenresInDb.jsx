@@ -11,10 +11,10 @@ class GenresInDb extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://127.0.0.1:3001/api/genres')
+        fetch('http://127.0.0.1:3000/api/users')
             .then(res => res.json())
             .then(genres => {
-                this.setState({ genresList: genres.data });
+                this.setState({ genresList: genres.users });
             })
             .catch(err => {
                 console.log(err);
@@ -35,7 +35,7 @@ class GenresInDb extends React.Component {
                     <div className={`card-body ${this.state.titleMouseOver ? 'bg-secondary' : ''}`}>
                         <div className="row">
                             {this.state.genresList.map((genre, index) =>
-                                <Genre name={genre.name} key={index} />
+                                <Genre name={genre.first_name} key={index} />
                             )}
                         </div>
                     </div>

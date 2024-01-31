@@ -5,9 +5,9 @@ function LastMovieInDb() {
 
   useEffect(() => {
     // Realiza la llamada a la API para obtener el último producto
-    fetch("http://127.0.0.1:3000/api/product/${product.id}")
+    fetch(`http://127.0.0.1:3000/api/products`)
       .then((res) => res.json())
-      .then((data) => setLastProduct(data));
+      .then((data) => setLastProduct(data.products[data.products.length - 1]));
   }, []);
 
   return (
@@ -20,11 +20,12 @@ function LastMovieInDb() {
           {lastProduct ? (
             <>
               <div className="text-center">
-                <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: '40rem' }} src={lastProduct.image} alt={lastProduct.name} />
+                <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: '40rem' }} src={`http://localhost:3000/images/products/${lastProduct.image}`} alt={lastProduct.name} />
               </div>
               <h1>{lastProduct.name}</h1>
               <p>{lastProduct.description}</p>
-              <a className="btn btn-danger" target="_blank" rel="nofollow" href={lastProduct.link}>
+              <p>${lastProduct.price}</p>
+              <a className="btn btn-danger" href={`http://localhost:3000/products/detail/${lastProduct.id}`}>
                 Ver más
               </a>
             </>
@@ -38,3 +39,6 @@ function LastMovieInDb() {
 }
 
 export default LastMovieInDb;
+
+{/* <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ "width": "40rem" }} src={`http://localhost:3030${detailLastProduct.mainImage}`} alt=" Star Wars - Mandalorian " /> */}
+// mainImage: `/images/products/${mainImage}`,

@@ -21,7 +21,7 @@ function SearchMovies() {
 
 	const handleSearch = React.useCallback((event) => {
 		event.preventDefault();
-		fetch(`http://www.omdbapi.com/?s=${keyword}&apikey=${apiKey}`)
+		fetch(`http://127.0.0.1:3000/api/products`)
 			.then(res => res.json())
 			.then(data => {
 				if (data.Search) {

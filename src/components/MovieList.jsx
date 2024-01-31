@@ -1,23 +1,30 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import React from "react";
+import { Link } from "react-router-dom";
 
-function MovieList(props) {
+function ProductList(props) {
   return (
-    <tr>
-      <td>{props.id}</td>
-      <td>{props.title}</td>
-      <td>{props.rating}</td>
-      <td>{props.awards}</td>
-      <td>{props.length}</td>
-    </tr>
+    <React.Fragment>
+      <tr className="highlight-row">
+        <td>{props.id}</td>
+        <td>{props.name}</td>
+        <td>{props.description}</td>
+        <td>{props.price}</td>
+        <td>
+          <Link to={`http://localhost:3000/products/detail/${props.id}`} className="links">
+            Ver
+          </Link>
+        </td>
+      </tr>
+    </React.Fragment>
   );
 }
 
-MovieList.propTypes = {
+ProductList.propTypes = {
   id: PropTypes.number,
-  title: PropTypes.string,
-  rating: PropTypes.number,
-  awards: PropTypes.number,
-  length: PropTypes.number
+  name: PropTypes.string,
+  description: PropTypes.string,
+  price: PropTypes.string
 };
 
-export default MovieList;
+export default ProductList;
