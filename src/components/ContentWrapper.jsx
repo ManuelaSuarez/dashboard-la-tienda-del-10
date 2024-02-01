@@ -3,11 +3,14 @@ import ContentRowTop from "./ContentRowTop";
 import Movie from "./Movie";
 
 function ContentWrapper() {
+    const contentWrapperStyle = {
+        background: '#000'
+    };
+
 	return (
 		<>
 			{/* <!-- Main Content --> */}
-			<div id="content">
-
+			<div style={contentWrapperStyle} id="content">
 				{/* <!-- Topbar --> */}
 				<TopBar />
 				{/* <!-- End of Topbar --> */}
@@ -19,8 +22,6 @@ function ContentWrapper() {
 			</div>
 			{/* <!-- End of MainContent --> */}
 		</>
-
-
 	);
 }
 

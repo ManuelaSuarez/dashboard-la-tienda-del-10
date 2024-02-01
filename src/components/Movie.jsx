@@ -22,9 +22,9 @@ class Products extends React.Component {
 
   render() {
     return (
-      <div style={{ padding: "10px" }}>
+      <div style={{ padding: "10px", background: "#000" }}>
         {/*<!-- MOVIES LIST -->*/}
-        <h1 className="h3 mb-2 text-gray-800 ">Productos Existentes</h1>
+        <h1 className="h3 mb-2 text-white">Productos Existentes</h1>
 
         {/*<!-- DataTales Example -->*/}
         <div className="card shadow mb-4">

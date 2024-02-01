@@ -1,6 +1,6 @@
 function TopBar() {
     return (
-        <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+        <nav className="navbar navbar-expand navbar-light bg-dark topbar mb-4 static-top shadow">
 
             <button id="sidebarToggleTop" className="btn btn-link d-md-none rounded-circle mr-3">
                 <i className="fa fa-bars"></i>
@@ -8,10 +8,9 @@ function TopBar() {
 
             <ul className="navbar-nav ml-auto">
 
-
                 <li className="nav-item dropdown no-arrow mx-1">
                     <a className="nav-link dropdown-toggle" href="/" id="alertsDropdown">
-                        <i className="fas fa-bell fa-fw"></i>
+                        <i className="fas fa-bell fa-fw text-white"></i>
 
                         <span className="badge badge-danger badge-counter">3+</span>
                     </a>
@@ -20,7 +19,7 @@ function TopBar() {
 
                 <li className="nav-item dropdown no-arrow mx-1">
                     <a className="nav-link dropdown-toggle" href="/" id="messagesDropdown">
-                        <i className="fas fa-envelope fa-fw"></i>
+                        <i className="fas fa-envelope fa-fw text-white"></i>
 
                         <span className="badge badge-danger badge-counter">7</span>
                     </a>
@@ -31,8 +30,8 @@ function TopBar() {
 
                 <li className="nav-item dropdown no-arrow">
                     <a className="nav-link dropdown-toggle" href="/" id="userDropdown">
-                        <span className="mr-2 d-none d-lg-inline text-gray-600 small">Jordan Walke</span>
-                        <img className="img-profile rounded-circle" src="/images/jordan-walke.png" alt="Jordan Walke - Creador de React" width="60" />
+                        <span className="mr-2 d-none d-lg-inline text-white small">Administrador</span>
+                        <img className="img-profile rounded-circle" src="/images/perfil.png" alt="Foto de Perfil" width="60"/>
                     </a>
                 </li>
 

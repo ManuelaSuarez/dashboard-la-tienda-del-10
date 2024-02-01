@@ -2,6 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function SearchMovies() {
+  const searchMoviesStyle = {
+      background: '#000'
+  };
+  const buttonSMStyle = {
+    background: '#63bbf2'
+  };
+
   const [products, setMovies] = React.useState([]);
   const [keyword, setKeyWord] = React.useState("");
 
@@ -29,7 +36,7 @@ function SearchMovies() {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid text-white" style={searchMoviesStyle}>
       <div className="row my-4">
         <div className="col-12 col-md-6">
           {/* Buscador */}
@@ -42,7 +49,7 @@ function SearchMovies() {
                 onChange={(e) => setKeyWord(e.target.value)}
               />
             </div>
-            <button className="btn btn-info">Buscar</button>
+            <button className="btn btn-info" style={buttonSMStyle}>Buscar</button>
           </form>
         </div>
       </div>
